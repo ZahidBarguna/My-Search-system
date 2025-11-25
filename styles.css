@@ -1,0 +1,67 @@
+/* Simple responsive styles for the person search system */
+:root{
+  --bg:#111111;
+  --card:#252525;
+  --muted:#6b7280;
+  --accent:#2563eb;
+  --highlight: #FE64A3;
+  --radius:10px;
+  --gap:16px;
+}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Roboto,system-ui,-apple-system,"Helvetica Neue",Arial;
+  background:var(--bg);
+  color:#ffffff;
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:1100px;margin:36px auto;padding:20px;}
+.header{margin-bottom:50px}
+.header h1{margin:0 0 6px;font-size:50px; text-align:center}
+.subtitle{margin:0 0 12px;color:var(--muted); text-align: center; padding-bottom:50px}
+.search-row{display:flex;gap:10px;align-items:center}
+#searchInput{flex:1;padding:10px 12px;border-radius:50px;border:1px solid #d1d5db;font-size:15px}
+#clearBtn{background:#ffffff;border:1px solid #d1d5db;padding:9px 20px;border-radius:50px;cursor:pointer}
+#clearBtn:hover{background:#ff0000; border:1px solid #ff0000;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,260px));justify-content:center;gap:var(--gap);margin-top:18px}
+.card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(17,24,39,0.06);border:1px solid rgba(15,23,42,0.03);display:flex;flex-direction:column;justify-content:flex-start;align-items:center;min-height:370px;text-align:center;position:relative}
+.card h3{margin:12px 0 6px;font-size:20px}
+.meta{color:var(--muted);font-size:13px;margin-bottom:8px}
+.field{margin:6px 0;font-size:14px}
+.small{font-size:13px;color:var(--muted)}
+.highlight{background:var(--highlight);padding:0 2px;border-radius:2px}
+.empty{padding:30px;text-align:center;color:var(--muted);grid-column:1/-1}
+/* Buttons */
+.primary{background:var(--accent);color:#fff;border:none;padding:8px 12px;border-radius:50px;cursor:pointer}
+.primary:hover{filter:brightness(.95)}
+button{font:inherit}
+
+/* Form styles */
+.form-card{max-width:720px;margin:12px 0}
+.form-row{display:flex;flex-direction:column;margin:8px 0}
+.form-row label{font-size:13px;color:var(--muted);margin-bottom:6px}
+.form-row input{padding:8px 10px;border:1px solid #e5e7eb;border-radius:6px}
+.form-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:10px}
+.hidden{display:none}
+
+/* Card actions */
+.card .actions{display:flex;gap:8px;justify-content:flex-end;margin-top:10px}
+.btn-sm{padding:6px 8px;border-radius:6px;border:1px solid #F9C80E;background:#F9C80E;cursor:pointer;font-size:13px}
+.btn-danger{border-color:#F86624;background:#F86624;color:#ffffff}
+
+/* Avatar & header */
+.card .top{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;width:100%}
+.avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;flex:0 0 120px;border:3px solid rgba(0,0,0,0.06)}
+.avatar.fallback{display:inline-flex;align-items:center;justify-content:center;background:#e6eefc;color:var(--accent);font-weight:700;font-size:40px;width:120px;height:120px;border-radius:50%}
+.card .content{flex:1 1 auto;margin-top:12px;text-align:left;width:100%}
+.divider{border:0;border-top:1px solid rgba(255,255,255,0.06);margin:14px 0;width:100%}
+.social{display:flex;gap:8px;margin-top:6px;justify-content:center}
+.social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:100px;background:#43BCCD;color:#111827;text-decoration:none}
+.social a span{font-weight:700;font-size:13px}
+.social a span{font-weight:700;font-size:13px}
+
+/* Copied badge */
+.copied-badge{position:absolute;top:12px;right:12px;background:var(--accent);color:#fff;padding:6px 10px;border-radius:8px;font-size:13px;box-shadow:0 6px 18px rgba(0,0,0,0.2)}
+
+@media (max-width:420px){.container{padding:12px}.header h1{font-size:20px; text-align:center}}
